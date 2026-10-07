@@ -73,12 +73,14 @@ try {
   record('GET / is 200', home.status === 200, `status ${home.status}`);
   record('GET / is HTML', /text\/html/.test(home.headers.get('content-type') ?? ''), home.headers.get('content-type'));
   record('GET / renders from the seed on a fresh database (cold start)', /data-content-source="seed"/.test(homeBody), homeBody.slice(0, 400));
-  record('GET / carries crawler-visible H1', /<h1[^>]*>Smoky Cannabis Company<\/h1>/.test(homeBody), '');
-  record('GET / states we are not GSCC', /not the Great Smoky Cannabis Company/i.test(homeBody) && /Smoky Mountain CBD/i.test(homeBody), '');
+  record('GET / carries crawler-visible H1', /<h1[^>]*>Smoky Cannabis Company — Hemp-Derived THCa Flower &amp; Products<\/h1>|<h1[^>]*>Smoky Cannabis Company — Hemp-Derived THCa Flower & Products<\/h1>/.test(homeBody), '');
+  record('GET / states we are not GSCC / Cherokee dispensary', /separate business from Great Smoky Cannabis Company/i.test(homeBody) && /not the Cherokee NC dispensary|not the Cherokee dispensary/i.test(homeBody) && /Smoky Mountain CBD/i.test(homeBody), '');
+  record('GET / answers AEO FAQ questions in HTML', /Does THCa get you high/i.test(homeBody) && /Is THCa legal in North Carolina/i.test(homeBody), '');
   record('GET / links live store categories with UTMs', homeBody.includes('product-category/edibles/') && homeBody.includes('product-category/thca-flower/') && homeBody.includes('product-category/cannabis-concentrates/') && homeBody.includes('utm_source=smokycannabisco') && homeBody.includes('utm_campaign=gscc_intercept'), '');
   record('GET / does not link the dead concentrates path', !homeBody.includes('/product-category/concentrates/'), '');
   record('GET / canonical is www', /<link rel="canonical" href="https:\/\/www\.smokycannabisco\.com\/?"/.test(homeBody), '');
   record('GET / declares a real OG image path', /property="og:image" content="https:\/\/www\.smokycannabisco\.com\/og-image\.jpg"/.test(homeBody), '');
+  record('GET / title marks Not GSCC', /Not GSCC/i.test(homeBody), '');
   expectCachedPage('GET /', home, 'astro-path:/');
 
   for (const path of ['/_emdash', '/_emdash/', '/_emdash/admin', '/_emdash/setup', '/_EMDASH/admin', '/%5Femdash/admin']) {

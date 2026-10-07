@@ -4,6 +4,11 @@ import '@fontsource-variable/source-sans-3/wght.css';
 import '../styles/site.css';
 import { safeHref } from '../content/blocks';
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -14,6 +19,7 @@ interface Props {
   ogImageAlt: string;
   contentSource?: 'cms' | 'seed' | 'none';
   page?: string;
+  faqItems?: FaqItem[];
 }
 const {
   title,
@@ -25,6 +31,7 @@ const {
   ogImageAlt,
   contentSource = 'none',
   page,
+  faqItems = [],
 } = Astro.props;
 const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const canonical = new URL(pathname, Astro.site ?? 'https://www.smokycannabisco.com');
@@ -45,7 +52,7 @@ const jsonLd = {
     '@type': 'Organization',
     name: 'Smoky Mountain CBD',
     url: 'https://www.smokymountaincbd.com/',
-    description: 'Compliant hemp-derived products shipping from Cherokee County, NC',
+    description: 'Compliant hemp-derived THCa products shipping from Western North Carolina',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Cherokee County',
@@ -54,6 +61,20 @@ const jsonLd = {
     },
   },
 };
+const faqJsonLd = faqItems.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
 ---
 <!doctype html>
 <html lang="en" data-page={page}>
@@ -80,6 +101,7 @@ const jsonLd = {
     <meta name="twitter:image" content={ogImage} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
     {/* Optional GA4: set PUBLIC_GA4_MEASUREMENT_ID at build time to enable. Store uses G-Q1FG6B6CR4; do not invent a property id here. */}
   </head>
   <body data-content-source={contentSource}>

@@ -25,6 +25,16 @@ const components = {
   cta: Cta,
   faq: Faq,
 };
+
+const faqItems = (page?.layout ?? [])
+  .filter((block) => block._type === 'faq' && Array.isArray(block.items))
+  .flatMap((block) =>
+    (block.items as Array<Record<string, unknown>>).map((item) => ({
+      question: typeof item.question === 'string' ? item.question : '',
+      answer: typeof item.answer === 'string' ? item.answer : '',
+    })),
+  )
+  .filter((item) => item.question && item.answer);
 ---
 <Site
   title={page?.title ?? 'Page not found'}
@@ -36,6 +46,7 @@ const components = {
   ogImageAlt={page?.og_image_alt ?? ''}
   contentSource={source}
   page={slug}
+  faqItems={faqItems}
 >
   {page ? (
     <Blocks value={page.layout as never} components={components as never} />

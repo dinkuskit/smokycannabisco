@@ -3,7 +3,7 @@
   "version": "1",
   "meta": {
     "name": "smokycannabisco.com",
-    "description": "GSCC intercept landing for Smoky Mountain CBD. Clarifies this site is not Great Smoky Cannabis Company and routes shoppers to shippable hemp products on smokymountaincbd.com."
+    "description": "Smoky Cannabis Company intercept landing: hemp-derived THCa online from Western NC. Clear disambiguation from Great Smoky Cannabis Company / Cherokee dispensary; store CTAs on smokymountaincbd.com."
   },
   "blockTypes": [
     {
@@ -339,41 +339,41 @@
         "slug": "home",
         "status": "published",
         "data": {
-          "title": "Smoky Cannabis Company | Premium Hemp Products NC",
-          "description": "Shop compliant hemp-derived THCa products from Cherokee County, NC. Fast shipping on edibles, flower, and concentrates. Visit Smoky Mountain CBD for quality hemp products.",
+          "title": "Smoky Cannabis Company | Hemp-Derived THCa Flower Online (Not GSCC)",
+          "description": "Looking for Great Smoky Cannabis Company or a Cherokee NC dispensary? Smoky Cannabis Company is a separate Western NC shop for hemp-derived THCa flower, THCa edibles, and THCa concentrates that ship — not affiliated with GSCC.",
           "brand_name": "Smoky Cannabis Company",
-          "nav_label": "Shop Smoky Mountain CBD",
+          "nav_label": "Shop hemp-derived THCa",
           "nav_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=nav_shop",
-          "footer_text": "© 2026 SmokyCannabisCo.com — Redirecting shoppers to SmokyMountainCBD.com for ordering. We are not Great Smoky Cannabis Company (GSCC). All product availability is subject to applicable laws.",
-          "og_image_alt": "Smoky Cannabis Company — not GSCC. Shop shippable hemp products at Smoky Mountain CBD.",
+          "footer_text": "© 2026 SmokyCannabisCo.com — Smoky Cannabis Company is not Great Smoky Cannabis Company (GSCC) or the Cherokee dispensary. Ordering continues at SmokyMountainCBD.com. Product availability is subject to applicable laws.",
+          "og_image_alt": "Smoky Cannabis Company — hemp-derived THCa online from Western NC. Not Great Smoky Cannabis Company / GSCC.",
           "layout": [
             {
               "_type": "hero",
               "_version": 1,
               "_key": "home-hero",
-              "eyebrow": "Cherokee County, NC · shippable hemp",
-              "heading": "Smoky Cannabis Company",
-              "lead": "We're not the Great Smoky Cannabis Company. We're Smoky Mountain CBD — a hemp-derived THCa vendor shipping fast from Cherokee County, NC. If you're looking to order edibles, flower, or concentrates online today, you're in the right place.",
-              "primary_label": "Visit Smoky Mountain CBD",
-              "primary_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hero_visit",
-              "secondary_label": "Shop edibles",
+              "eyebrow": "Western North Carolina · hemp-derived THCa online",
+              "heading": "Smoky Cannabis Company — Hemp-Derived THCa Flower & Products",
+              "lead": "Searching for Smoky Mountain cannabis, a Smoky Mountain dispensary, or Great Smoky Cannabis Company? You are not at the Cherokee dispensary. Smoky Cannabis Company partners with Smoky Mountain CBD for compliant hemp-derived THCa flower, edibles, and concentrates that ship from Western North Carolina.",
+              "primary_label": "Shop THCa flower online",
+              "primary_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hero_flower",
+              "secondary_label": "Shop THCa edibles",
               "secondary_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hero_edibles"
             },
             {
               "_type": "notice",
               "_version": 1,
               "_key": "home-notice",
-              "heading": "Quick note: we are not GSCC",
-              "body": "We're not the Great Smoky Cannabis Company, and we don't claim to represent them. We're Smoky Mountain CBD — a separate business using hemp rules to deliver compliant products to your doorstep."
+              "heading": "Not Great Smoky Cannabis Company / not the Cherokee dispensary",
+              "body": "Smoky Cannabis Co (smokycannabisco.com) is a separate business from Great Smoky Cannabis Company (also searched as Great Smoky Cannabis Co / greatsmokycannabisco.com). We are not the Cherokee NC dispensary on the Qualla Boundary. GSCC is a tribal recreational dispensary for in-store purchases only. We sell hemp-derived THCa products online through Smoky Mountain CBD."
             },
             {
               "_type": "text_section",
               "_version": 1,
               "_key": "home-intro",
               "anchor": "intro",
-              "heading": "A unique first in North Carolina",
-              "body": "The Great Smoky Cannabis Company (GSCC) is the first and only recreational cannabis dispensary in North Carolina, operating on the Qualla Boundary in Cherokee under the sovereignty of the Eastern Band of Cherokee Indians. That distinction allows GSCC to serve walk-in customers on tribal land — even though recreational cannabis remains prohibited elsewhere in the state.\n\nWe want to be clear: we are not the Great Smoky Cannabis Company. We're Smoky Mountain CBD (SMCBD), and while our names and geography are similar, we serve a different need: compliant, shippable hemp-derived products you can order online today.",
-              "link_label": "Explore Smoky Mountain CBD",
+              "heading": "Great Smoky Cannabis Company vs Smoky Cannabis Company",
+              "body": "Great Smoky Cannabis Company (GSCC) is the recreational cannabis dispensary on the Qualla Boundary in Cherokee, operating under the sovereignty of the Eastern Band of Cherokee Indians. That Cherokee dispensary serves walk-in customers on tribal land — even though recreational cannabis remains prohibited elsewhere in North Carolina.\n\nSmoky Cannabis Company is different. We are not GSCC, not a Smoky Mountain dispensary on the reservation, and not a Cherokee NC dispensary. Through Smoky Mountain CBD we offer hemp-derived THCa you can order online today: flower, edibles, and carefully labeled concentrates that ship from Western North Carolina.",
+              "link_label": "Browse Smoky Mountain CBD",
               "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=intro_explore"
             },
             {
@@ -381,42 +381,44 @@
               "_version": 1,
               "_key": "home-law",
               "anchor": "law",
-              "heading": "Understanding cannabis laws in North Carolina",
-              "body": "Recreational cannabis is not legalized statewide in North Carolina. Possession and retail sales of marijuana remain illegal outside of tribal jurisdiction. GSCC operates legally because tribal sovereignty allows the Eastern Band of Cherokee Indians to regulate commerce on their land, creating a narrow, location-specific exception for in-person purchases at their dispensary in Cherokee.\n\nFor everyone else — including residents who aren't able to visit Cherokee — hemp-derived products provide a compliant alternative. Under federal law, hemp and hemp-derived cannabinoids can be sold and shipped when products meet the delta-9 THC threshold. This framework enables online ordering and fast fulfillment for compliant hemp goods."
+              "heading": "Is THCa legal in North Carolina?",
+              "body": "Recreational marijuana is not legalized statewide in North Carolina. The Cherokee dispensary (Great Smoky Cannabis Company) operates on tribal land under a sovereignty-based exception for in-person sales — that path is not available to everyone and is not an online store.\n\nHemp-derived THCa products are sold under the federal hemp framework when finished goods meet applicable delta-9 THC limits. Rules can change by product type and destination, so availability depends on current law where you live. We do not give legal advice; shop compliant hemp-derived THCa from Smoky Mountain CBD when those products are allowed in your area.",
+              "link_label": "See current THCa flower",
+              "link_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=law_flower"
             },
             {
               "_type": "text_section",
               "_version": 1,
               "_key": "home-smcb",
               "anchor": "smcb",
-              "heading": "Smoky Mountain CBD — local roots, nationwide reach",
-              "body": "We're proudly based in Cherokee County, North Carolina — the same county where GSCC operates — and we specialize in high-quality, compliant hemp-derived products available to order online right now. If you searched for the Great Smoky Cannabis Company because of the name, the region, or curiosity about local options, we're here to give you a fast, reliable way to get what you're looking for.\n\nWhen convenience and compliance matter, delivery wins. Our hemp-derived products ship quickly from Cherokee County, NC, with packaging designed for protection and discretion. Orders are processed promptly, and customer support is responsive — because we know speed and clarity count.",
-              "link_label": "Browse Smoky Mountain CBD",
+              "heading": "Hemp-derived THCa from Western North Carolina",
+              "body": "Smoky Mountain CBD is based in Cherokee County, North Carolina — near the same Western NC geography people associate with Smoky Mountain cannabis searches — and fulfills online orders for hemp-derived THCa flower, THCa edibles, and THCa concentrates.\n\nIf you found us while looking for Great Smoky Cannabis, a Smoky Mountain dispensary, or a dispensary in Cherokee NC, use this site to confirm who is who: GSCC is in-store on the Qualla Boundary; we ship compliant hemp products. Orders leave Western NC quickly, with packaging meant for protection and discretion.",
+              "link_label": "Start shopping Smoky Mountain CBD",
               "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=smcb_browse"
             },
             {
               "_type": "category_grid",
               "_version": 1,
               "_key": "home-categories",
-              "heading": "Shop by category",
-              "intro": "New drops and core staples across edibles, flower, and concentrates — live category links on Smoky Mountain CBD.",
+              "heading": "Shop hemp-derived THCa by category",
+              "intro": "Brand-own product paths on Smoky Mountain CBD — THCa flower, THCa edibles, and THCa concentrates with live category URLs.",
               "items": [
                 {
-                  "title": "Edibles",
-                  "body": "Compliant hemp-derived edibles you can order online and have shipped.",
-                  "link_label": "Shop edibles",
-                  "link_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=shop_edibles"
-                },
-                {
                   "title": "THCa flower",
-                  "body": "Fresh, aromatic hemp flower with THCa, curated by effect and terpene profile.",
-                  "link_label": "Shop flower",
+                  "body": "Shop hemp-derived THCa flower curated by effect and terpene profile — a core online category for Smoky Cannabis Company shoppers.",
+                  "link_label": "Shop THCa flower",
                   "link_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=shop_flower"
                 },
                 {
-                  "title": "Concentrates",
-                  "body": "Browse live cannabis concentrates on the Smoky Mountain CBD store.",
-                  "link_label": "Shop concentrates",
+                  "title": "THCa edibles",
+                  "body": "Browse THCa edibles you can order online when compliant hemp-derived options are available to ship to your address.",
+                  "link_label": "Shop THCa edibles",
+                  "link_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=shop_edibles"
+                },
+                {
+                  "title": "THCa concentrates",
+                  "body": "Explore live THCa concentrates on the store — check each listing for lab details and shipping eligibility where you live.",
+                  "link_label": "Shop THCa concentrates",
                   "link_href": "https://www.smokymountaincbd.com/product-category/cannabis-concentrates/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=shop_concentrates"
                 }
               ]
@@ -425,19 +427,35 @@
               "_type": "faq",
               "_version": 1,
               "_key": "home-faq",
-              "heading": "If you were searching for GSCC",
+              "heading": "FAQ: GSCC intercept & THCa basics",
               "items": [
                 {
                   "question": "Are you Great Smoky Cannabis Company?",
-                  "answer": "No. Great Smoky Cannabis Company (GSCC) is a tribal recreational dispensary on the Qualla Boundary in Cherokee. We are Smoky Mountain CBD — a separate business offering compliant hemp-derived products that ship."
+                  "answer": "No. Great Smoky Cannabis Company (GSCC / Great Smoky Cannabis Co) is the tribal recreational dispensary on the Qualla Boundary in Cherokee. Smoky Cannabis Company (smokycannabisco.com) is a separate business that routes shoppers to Smoky Mountain CBD for hemp-derived THCa products that ship."
+                },
+                {
+                  "question": "Does Cherokee NC have a dispensary?",
+                  "answer": "Yes — Great Smoky Cannabis Company operates as a Cherokee NC / Cherokee dispensary on tribal land for in-store purchases. That is not this website. Smoky Cannabis Company is not that dispensary and does not sell GSCC products online."
+                },
+                {
+                  "question": "Does THCa get you high?",
+                  "answer": "THCa is the acidic form of THC found in raw hemp and cannabis flower. It is generally described as non-intoxicating until it is heated (for example when smoked or vaporized), when it can convert to THC. Effects vary by product, dose, and person. This is educational information only — not medical advice."
+                },
+                {
+                  "question": "Is THCa legal in North Carolina?",
+                  "answer": "North Carolina does not have statewide recreational marijuana. Hemp-derived THCa products may be sold when they meet applicable federal hemp and delta-9 THC limits, but rules depend on the product and where it is shipped. The Cherokee dispensary (GSCC) is a separate tribal in-store model. Confirm current law for your location before you buy; we do not provide legal advice."
+                },
+                {
+                  "question": "What is hemp-derived THCa?",
+                  "answer": "Hemp-derived THCa refers to THCa produced from hemp that meets the federal hemp definition. Smoky Mountain CBD sells hemp-derived THCa flower, edibles, and concentrates intended for adult customers where shipping is allowed."
                 },
                 {
                   "question": "Can I order GSCC products online from this site?",
-                  "answer": "No. GSCC is an in-store experience on tribal land. If you need shippable hemp products, Smoky Mountain CBD fulfills online orders from Cherokee County, NC."
+                  "answer": "No. GSCC is an in-store Cherokee dispensary experience. For shippable hemp-derived THCa, continue to Smoky Mountain CBD from the category links on this page."
                 },
                 {
                   "question": "What can I buy online today?",
-                  "answer": "Edibles, THCa flower, concentrates, and other compliant hemp-derived goods on smokymountaincbd.com, subject to applicable laws and product availability."
+                  "answer": "THCa flower, THCa edibles, THCa concentrates, and other compliant hemp-derived goods on smokymountaincbd.com, subject to applicable laws and stock."
                 }
               ]
             },
@@ -445,9 +463,9 @@
               "_type": "cta",
               "_version": 1,
               "_key": "home-cta",
-              "heading": "From Cherokee County, NC — get your order sooner.",
-              "body": "Ready to shop shippable hemp products? Continue to Smoky Mountain CBD.",
-              "link_label": "Start at Smoky Mountain CBD",
+              "heading": "Ready for hemp-derived THCa that ships?",
+              "body": "Skip the Cherokee dispensary confusion — shop Smoky Mountain CBD for THCa flower and more from Western North Carolina.",
+              "link_label": "Continue to Smoky Mountain CBD",
               "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=footer_cta"
             }
           ]
