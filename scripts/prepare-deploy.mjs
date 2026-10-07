@@ -13,6 +13,8 @@ import { fileURLToPath } from 'node:url';
  *   SMOKY_CUSTOM_DOMAIN   optional custom domains, comma-separated
  *   SMOKY_WORKERS_DEV     "true" to serve on workers.dev
  *   SMOKY_SANDBOX         "false" to drop worker_loaders
+ *   SMOKY_WORKER_NAME     optional Worker name override
+ *   SMOKY_SITE_URL        optional public origin for runtime vars
  *
  * Output: dist/server/wrangler.production.json (ignored). Nothing here deploys.
  */
@@ -26,8 +28,13 @@ if (!d1Id) {
 }
 const config = {
   ...built,
+  ...(env.SMOKY_WORKER_NAME?.trim() ? { name: env.SMOKY_WORKER_NAME.trim() } : {}),
   workers_dev: env.SMOKY_WORKERS_DEV === 'true',
   preview_urls: false,
+  vars: {
+    ...(built.vars ?? {}),
+    ...(env.SMOKY_SITE_URL?.trim() ? { EMDASH_SITE_URL: env.SMOKY_SITE_URL.trim() } : {}),
+  },
   d1_databases: (built.d1_databases ?? []).map((db) =>
     db.binding === 'DB' ? { ...db, database_name: env.SMOKY_D1_NAME?.trim() || 'smokycannabisco-site-cms', database_id: d1Id } : db,
   ),

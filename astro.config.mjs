@@ -8,20 +8,21 @@ import emdash from 'emdash/astro';
 // Build input only. Unset (the default) leaves the /_emdash namespace denied
 // in production; see docs/cms-access.md. Never commit a value.
 const teamDomain = process.env.EMDASH_ACCESS_TEAM_DOMAIN ?? '';
+const siteUrl = process.env.SMOKY_SITE_URL ?? 'https://www.smokycannabisco.com';
 
 // The build's own timestamp: the validator of a seed-rendered page, whose
 // content changes only with a deploy (src/page-cache.ts).
 const buildTime = new Date().toISOString();
 
 export default defineConfig({
-  site: 'https://www.smokycannabisco.com',
+  site: siteUrl,
   output: 'server',
   adapter: cloudflare({ imageService: 'passthrough' }),
   cache: { provider: cacheCloudflare() },
   integrations: [
     react(),
     emdash({
-      siteUrl: 'https://www.smokycannabisco.com',
+      siteUrl,
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
       sandboxRunner: sandbox(),
