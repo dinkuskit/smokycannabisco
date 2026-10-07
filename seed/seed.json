@@ -470,6 +470,434 @@
             }
           ]
         }
+      },
+      {
+        "id": "thca-flower",
+        "slug": "products/thca-flower",
+        "status": "published",
+        "data": {
+          "title": "THCa Flower Online | Hemp-Derived THCa Flower",
+          "description": "Learn what hemp-derived THCa flower is, how heating changes it, and where to shop THCa flower online from Smoky Mountain CBD.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop THCa flower",
+          "nav_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=flower_nav",
+          "footer_text": "Smoky Cannabis Company is separate from Great Smoky Cannabis Company and the Cherokee dispensary. Adult-use and shipping rules vary by location.",
+          "og_image_alt": "Hemp-derived THCa flower online from Smoky Cannabis Company, separate from Great Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "flower-hero",
+              "eyebrow": "Hemp-derived THCa education and shopping",
+              "heading": "THCa flower online",
+              "lead": "THCa flower is hemp flower selected for its naturally occurring tetrahydrocannabinolic acid. Shop the live THCa flower category through Smoky Mountain CBD, a separate online store from the Cherokee dispensary.",
+              "primary_label": "Shop THCa flower",
+              "primary_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=flower_hero",
+              "secondary_label": "What is hemp-derived THCa?",
+              "secondary_href": "/learn/hemp-derived-thca"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "flower-notice",
+              "heading": "This is not Great Smoky Cannabis Company",
+              "body": "Smoky Cannabis Company is a separate business from Great Smoky Cannabis Company (GSCC), the Cherokee-area tribal recreational dispensary on the Qualla Boundary. This page routes to shippable hemp-derived THCa from Smoky Mountain CBD; it is not a GSCC product page."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "flower-definition",
+              "anchor": "what-is-thca-flower",
+              "heading": "What is THCa flower?",
+              "body": "THCa flower is hemp flower that contains THCa before it is heated. THCa is the acidic precursor to THC. Raw flower is generally described as non-intoxicating, while heating can convert THCa into THC. Product effects vary, and this explanation is educational rather than medical advice.\n\nReview the product listing, certificate-of-analysis information, age requirements, and shipping eligibility before ordering. Laws and carrier policies can change by destination.",
+              "link_label": "Read about hemp-derived THCa",
+              "link_href": "/learn/hemp-derived-thca"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "flower-faq",
+              "heading": "THCa flower questions",
+              "items": [
+                {
+                  "question": "What is the difference between THCa flower and THC flower?",
+                  "answer": "THCa flower contains THCa, an acidic form that can convert to THC when heated. The source, test results, total cannabinoid profile, and applicable law matter for any product; do not assume products have identical effects or legal status."
+                },
+                {
+                  "question": "Does THCa flower get you high if you smoke it?",
+                  "answer": "Heating THCa can convert it into THC, which may be intoxicating. Effects depend on the product and person. Do not drive or operate machinery after using an intoxicating product."
+                },
+                {
+                  "question": "Can I buy THCa flower online?",
+                  "answer": "Smoky Mountain CBD lists hemp-derived THCa flower for online orders where the product and destination meet applicable requirements. Check the live listing and current rules before ordering."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "flower-cta",
+              "heading": "Browse the live THCa flower category",
+              "body": "Availability, lab details, and shipping eligibility belong to the current store listing.",
+              "link_label": "Shop Smoky Mountain CBD",
+              "link_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=flower_cta"
+            }
+          ]
+        }
+      },
+      {
+        "id": "thca-edibles",
+        "slug": "products/thca-edibles",
+        "status": "published",
+        "data": {
+          "title": "THCa Edibles Online | Hemp-Derived Edibles",
+          "description": "Explore hemp-derived THCa edibles online through Smoky Mountain CBD. Separate from Great Smoky Cannabis Company and the Cherokee dispensary.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop THCa edibles",
+          "nav_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=edibles_nav",
+          "footer_text": "Smoky Cannabis Company is separate from Great Smoky Cannabis Company and the Cherokee dispensary. Read labels and follow applicable age and shipping rules.",
+          "og_image_alt": "Hemp-derived THCa edibles online from Smoky Cannabis Company, separate from Great Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "edibles-hero",
+              "eyebrow": "Online hemp product category",
+              "heading": "THCa edibles",
+              "lead": "Find hemp-derived THCa edibles through the live Smoky Mountain CBD store. We are a separate online business, not Great Smoky Cannabis Company or the Cherokee dispensary.",
+              "primary_label": "Shop THCa edibles",
+              "primary_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=edibles_hero",
+              "secondary_label": "Does THCa get you high?",
+              "secondary_href": "/learn/does-thca-get-you-high"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "edibles-notice",
+              "heading": "Separate business, separate product path",
+              "body": "Great Smoky Cannabis Company is the tribal recreational dispensary on the Qualla Boundary in Cherokee. Smoky Cannabis Company does not represent GSCC and does not sell GSCC products. The links here go to Smoky Mountain CBD's online hemp catalog."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "edibles-guide",
+              "anchor": "edible-basics",
+              "heading": "How to approach THCa edibles",
+              "body": "Edibles can take longer to feel than inhaled products and may last longer. Follow the product label, avoid taking more before you understand the serving guidance, and keep products away from children and pets. Do not combine intoxicating products with driving or other risky activities.\n\nCheck the current listing for ingredients, cannabinoid amounts, lab documentation, age requirements, and shipping restrictions. This is general education, not medical advice.",
+              "link_label": "See the current edibles category",
+              "link_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=edibles_guide"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "edibles-faq",
+              "heading": "THCa edibles FAQ",
+              "items": [
+                {
+                  "question": "Are THCa edibles the same as THC edibles?",
+                  "answer": "Not necessarily. THCa is an acidic cannabinoid that can convert to THC when heated, while products may contain different cannabinoids and amounts. Read the label and certificate of analysis rather than treating every edible as interchangeable."
+                },
+                {
+                  "question": "How long do THCa edibles take to work?",
+                  "answer": "Timing varies by product, person, food intake, and other factors. Follow the label and do not redose quickly just because effects are not immediate."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "edibles-cta",
+              "heading": "Shop the live THCa edibles collection",
+              "body": "Product availability and shipping eligibility can change.",
+              "link_label": "Browse THCa edibles",
+              "link_href": "https://www.smokymountaincbd.com/product-category/edibles/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=edibles_cta"
+            }
+          ]
+        }
+      },
+      {
+        "id": "concentrates",
+        "slug": "products/concentrates",
+        "status": "published",
+        "data": {
+          "title": "THCa Concentrates | Hemp-Derived Concentrates Online",
+          "description": "Learn about hemp-derived THCa concentrates and browse the live category at Smoky Mountain CBD. Not Great Smoky Cannabis Company or the Cherokee dispensary.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop THCa concentrates",
+          "nav_href": "https://www.smokymountaincbd.com/product-category/cannabis-concentrates/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=concentrates_nav",
+          "footer_text": "Smoky Cannabis Company is separate from Great Smoky Cannabis Company and the Cherokee dispensary. Follow labels and applicable law.",
+          "og_image_alt": "Hemp-derived THCa concentrates online from Smoky Cannabis Company, separate from Great Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "concentrates-hero",
+              "eyebrow": "Hemp-derived product education",
+              "heading": "THCa concentrates",
+              "lead": "Explore the live hemp-derived concentrates category at Smoky Mountain CBD. This is a separate online product path, not Great Smoky Cannabis Company and not the Cherokee dispensary.",
+              "primary_label": "Shop THCa concentrates",
+              "primary_href": "https://www.smokymountaincbd.com/product-category/cannabis-concentrates/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=concentrates_hero",
+              "secondary_label": "Learn about hemp-derived THCa",
+              "secondary_href": "/learn/hemp-derived-thca"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "concentrates-notice",
+              "heading": "Do not confuse this store with GSCC",
+              "body": "Great Smoky Cannabis Company is a separate tribal recreational dispensary on the Qualla Boundary in Cherokee and is associated with in-store purchases. Smoky Cannabis Company routes online shoppers to Smoky Mountain CBD for hemp-derived products; we are not affiliated with GSCC."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "concentrates-guide",
+              "anchor": "concentrate-basics",
+              "heading": "What to check before buying THCa concentrates",
+              "body": "Concentrates are processed products, so potency, ingredients, extraction details, and test results matter. Read the current listing and certificate of analysis, follow the label, and verify that the product may be shipped to your address. Higher concentration does not mean a product is right for every adult.\n\nThis page provides product education only. It does not diagnose, treat, or prevent any condition.",
+              "link_label": "Browse the live concentrate category",
+              "link_href": "https://www.smokymountaincbd.com/product-category/cannabis-concentrates/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=concentrates_guide"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "concentrates-faq",
+              "heading": "THCa concentrates FAQ",
+              "items": [
+                {
+                  "question": "What are THCa concentrates?",
+                  "answer": "THCa concentrates are processed hemp-derived products made to contain a more concentrated cannabinoid profile than raw flower. Exact contents vary, so use the product label and certificate of analysis for the specific item."
+                },
+                {
+                  "question": "Are THCa concentrates legal to ship everywhere?",
+                  "answer": "No product should be assumed legal or shippable everywhere. Requirements can depend on the product, current federal and state rules, and the destination. Check current rules and the store's shipping eligibility before ordering."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "concentrates-cta",
+              "heading": "See current concentrate availability",
+              "body": "The live store is the source of truth for listings, lab information, and shipping.",
+              "link_label": "Shop Smoky Mountain CBD",
+              "link_href": "https://www.smokymountaincbd.com/product-category/cannabis-concentrates/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=concentrates_cta"
+            }
+          ]
+        }
+      },
+      {
+        "id": "thca-legal-north-carolina",
+        "slug": "learn/thca-legal-north-carolina",
+        "status": "published",
+        "data": {
+          "title": "Is THCa Legal in North Carolina? | Hemp-Derived THCa",
+          "description": "A plain-language overview of hemp-derived THCa and North Carolina rules. Product legality and shipping eligibility can change; this is not legal advice.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop compliant THCa",
+          "nav_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=legal_nav",
+          "footer_text": "Legal information changes. Smoky Cannabis Company is not a law firm and is separate from Great Smoky Cannabis Company and the Cherokee dispensary.",
+          "og_image_alt": "Educational guide to hemp-derived THCa and North Carolina law from Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "legal-hero",
+              "eyebrow": "North Carolina THCa guide",
+              "heading": "Is THCa legal in North Carolina?",
+              "lead": "Hemp-derived THCa may be lawful when the finished product meets applicable hemp and delta-9 THC requirements, but product rules and shipping eligibility can change. This page is general information, not legal advice.",
+              "primary_label": "Shop hemp-derived THCa",
+              "primary_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=legal_hero",
+              "secondary_label": "What is hemp-derived THCa?",
+              "secondary_href": "/learn/hemp-derived-thca"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "legal-notice",
+              "heading": "Know which business you are visiting",
+              "body": "This site is not Great Smoky Cannabis Company, the Cherokee dispensary on the Qualla Boundary. GSCC's tribal, in-person model is separate from online hemp-derived THCa products routed through Smoky Mountain CBD."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "legal-answer",
+              "anchor": "short-answer",
+              "heading": "The short answer",
+              "body": "North Carolina does not have statewide recreational marijuana legalization. Hemp-derived products are evaluated under applicable federal and state requirements, including limits that can apply to delta-9 THC in the finished product. THCa itself can convert to THC when heated, so a label or marketing name is not a substitute for reviewing the complete product details.\n\nBefore ordering, check the current law where you live, the product's certificate of analysis, age requirements, and the store's shipping restrictions. Rules can change, and we do not provide legal advice.",
+              "link_label": "Review current products",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=legal_products"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "legal-faq",
+              "heading": "North Carolina THCa FAQ",
+              "items": [
+                {
+                  "question": "Is hemp-derived THCa legal in North Carolina?",
+                  "answer": "It may be lawful when a finished product meets applicable federal and North Carolina requirements, but legality depends on the product and current rules. Confirm the law and shipping eligibility for your situation before buying."
+                },
+                {
+                  "question": "Is the Cherokee dispensary the same as an online hemp store?",
+                  "answer": "No. Great Smoky Cannabis Company is a separate tribal dispensary on the Qualla Boundary with an in-person model. Smoky Cannabis Company routes shoppers to Smoky Mountain CBD for online hemp-derived products and is not affiliated with GSCC."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "legal-cta",
+              "heading": "Shop only when your product and destination qualify",
+              "body": "Read the current listing and confirm local requirements before placing an order.",
+              "link_label": "Continue to Smoky Mountain CBD",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=legal_cta"
+            }
+          ]
+        }
+      },
+      {
+        "id": "does-thca-get-you-high",
+        "slug": "learn/does-thca-get-you-high",
+        "status": "published",
+        "data": {
+          "title": "Does THCa Get You High? What Happens When THCa Is Heated",
+          "description": "Does THCa get you high? Learn the direct answer: heating THCa can convert it to THC. Effects vary by product and person. Educational information only.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop THCa products",
+          "nav_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=effects_nav",
+          "footer_text": "Educational information only; no medical claims. Smoky Cannabis Company is separate from Great Smoky Cannabis Company and the Cherokee dispensary.",
+          "og_image_alt": "Answer to does THCa get you high from Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "effects-hero",
+              "eyebrow": "THCa explained plainly",
+              "heading": "Does THCa get you high?",
+              "lead": "Raw THCa is generally described as non-intoxicating, but heating THCa can convert it into THC, which may produce an intoxicating effect. Product strength, method, dose, and individual response all matter.",
+              "primary_label": "Shop THCa flower",
+              "primary_href": "https://www.smokymountaincbd.com/product-category/thca-flower/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=effects_flower",
+              "secondary_label": "Read the hemp-derived THCa guide",
+              "secondary_href": "/learn/hemp-derived-thca"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "effects-notice",
+              "heading": "Education, not medical advice",
+              "body": "This is general cannabinoid education, not a promise of effects or medical guidance. Do not drive or operate machinery after using a product that may be intoxicating. Smoky Cannabis Company is not Great Smoky Cannabis Company or the Cherokee dispensary."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "effects-answer",
+              "anchor": "direct-answer",
+              "heading": "What changes when THCa is heated?",
+              "body": "THCa is the acidic form of THC found in raw hemp and cannabis flower. Heat can cause decarboxylation, a chemical change that converts THCa into THC. That is why smoking or vaporizing THCa flower may feel different from handling unheated flower. Edibles and concentrates may have their own timing and intensity considerations.\n\nRead the label and lab information for the specific product. Never assume a product is non-intoxicating simply because it is marketed as THCa, and keep products away from children and pets.",
+              "link_label": "Browse current hemp-derived products",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=effects_products"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "effects-faq",
+              "heading": "THCa effects FAQ",
+              "items": [
+                {
+                  "question": "Does THCa flower get you high when smoked?",
+                  "answer": "It can. Smoking heats THCa and can convert it into THC, which may be intoxicating. Effects vary by product and person, so use the label and do not drive after use."
+                },
+                {
+                  "question": "Is THCa the same as THC?",
+                  "answer": "No. THCa is an acidic precursor to THC. Heating can convert THCa into THC, so the two terms should not be treated as interchangeable."
+                },
+                {
+                  "question": "Does THCa show up on a drug test?",
+                  "answer": "A hemp-derived product may contain or produce cannabinoids that create a risk of a positive drug test. Do not use a product if you need to avoid that risk; testing methods and products vary."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "effects-cta",
+              "heading": "Understand the product before you shop",
+              "body": "Check current labels, lab information, and local requirements at the live store.",
+              "link_label": "Visit Smoky Mountain CBD",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=effects_cta"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hemp-derived-thca",
+        "slug": "learn/hemp-derived-thca",
+        "status": "published",
+        "data": {
+          "title": "What Is Hemp-Derived THCa? A Plain-Language Guide",
+          "description": "What does hemp-derived THCa mean? Learn how source, testing, heating, and shipping rules fit together before shopping online.",
+          "brand_name": "Smoky Cannabis Company",
+          "nav_label": "Shop hemp-derived THCa",
+          "nav_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hemp_nav",
+          "footer_text": "Smoky Cannabis Company is separate from Great Smoky Cannabis Company and the Cherokee dispensary. Product and legal information can change.",
+          "og_image_alt": "Plain-language guide to hemp-derived THCa from Smoky Cannabis Company.",
+          "layout": [
+            {
+              "_type": "hero",
+              "_version": 1,
+              "_key": "hemp-hero",
+              "eyebrow": "Hemp-derived THCa guide",
+              "heading": "What is hemp-derived THCa?",
+              "lead": "Hemp-derived THCa is THCa sourced from hemp rather than marijuana, with the finished product evaluated under applicable hemp requirements. Source alone does not answer every legality or effects question.",
+              "primary_label": "Shop hemp-derived THCa",
+              "primary_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hemp_hero",
+              "secondary_label": "Is THCa legal in North Carolina?",
+              "secondary_href": "/learn/thca-legal-north-carolina"
+            },
+            {
+              "_type": "notice",
+              "_version": 1,
+              "_key": "hemp-notice",
+              "heading": "Clear brand distinction",
+              "body": "Smoky Cannabis Company is a separate business from Great Smoky Cannabis Company (GSCC), the Cherokee-area tribal recreational dispensary. This page explains hemp-derived products routed through Smoky Mountain CBD and does not describe or represent GSCC."
+            },
+            {
+              "_type": "text_section",
+              "_version": 1,
+              "_key": "hemp-definition",
+              "anchor": "definition",
+              "heading": "Source, testing, and heat all matter",
+              "body": "Hemp-derived describes the plant source, not a guarantee that every product has the same cannabinoid profile. Review the product label and certificate of analysis for cannabinoids, delta-9 THC, ingredients, and batch information. A product may also be affected by the law where it is sold or shipped.\n\nTHCa is an acidic cannabinoid that can convert to THC when heated. That means a hemp-derived THCa product can still have intoxicating potential depending on how it is used. This guide is educational only and makes no medical claims.",
+              "link_label": "Review current store listings",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hemp_listings"
+            },
+            {
+              "_type": "faq",
+              "_version": 1,
+              "_key": "hemp-faq",
+              "heading": "Hemp-derived THCa FAQ",
+              "items": [
+                {
+                  "question": "What does hemp-derived THCa mean?",
+                  "answer": "It means the THCa is sourced from hemp. You still need to review the finished product's cannabinoid profile, testing, label, and destination rules because source alone does not establish effects or legality."
+                },
+                {
+                  "question": "Is hemp-derived THCa non-intoxicating?",
+                  "answer": "Unheated THCa is generally described as non-intoxicating, but heat can convert it into THC. A product's effects depend on its contents and use."
+                }
+              ]
+            },
+            {
+              "_type": "cta",
+              "_version": 1,
+              "_key": "hemp-cta",
+              "heading": "Shop with the current information in view",
+              "body": "Check each listing, its lab information, and shipping eligibility before ordering.",
+              "link_label": "Continue to Smoky Mountain CBD",
+              "link_href": "https://www.smokymountaincbd.com/?utm_source=smokycannabisco&utm_medium=referral&utm_campaign=gscc_intercept&utm_content=hemp_cta"
+            }
+          ]
+        }
       }
     ]
   }

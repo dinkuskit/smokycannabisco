@@ -1,16 +1,31 @@
 import type { APIRoute } from 'astro';
+import seed from '../../seed/seed.json';
 
-const CANONICAL = 'https://www.smokycannabisco.com/';
+const CANONICAL = 'https://www.smokycannabisco.com';
+const pages = (seed as { content?: { pages?: Array<{ slug?: string; status?: string }> } }).content?.pages ?? [];
+
+function xml(value: string): string {
+  return value.replace(/[<>&'"]/g, (character) => ({
+    '<': '&lt;',
+    '>': '&gt;',
+    '&': '&amp;',
+    "'": '&apos;',
+    '"': '&quot;',
+  })[character] ?? character);
+}
 
 /** Real XML sitemap — not an SPA HTML shell. */
 export const GET: APIRoute = () => {
+  const urls = pages
+    .filter((page) => (page.status ?? 'published') === 'published' && page.slug)
+    .map((page) => {
+      const path = page.slug === 'home' ? '/' : `/${page.slug}`;
+      return `  <url>\n    <loc>${xml(`${CANONICAL}${path}`)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${page.slug === 'home' ? '1.0' : '0.7'}</priority>\n  </url>`;
+    })
+    .join('\n');
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${CANONICAL}</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+${urls}
 </urlset>
 `;
   return new Response(body, {
