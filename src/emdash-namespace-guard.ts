@@ -1,5 +1,4 @@
 import { defineMiddleware } from 'astro:middleware';
-import { authenticate as accessAuthenticate } from '@emdash-cms/cloudflare/auth';
 import { env as workerEnv } from 'cloudflare:workers';
 import {
   ALLOWLIST_ENV,
@@ -11,6 +10,7 @@ import {
   requestPathname,
   type GateEnv,
 } from './namespace-gate.ts';
+import { authenticate as accessAuthenticate } from './emdash-access-auth.ts';
 
 /**
  * The team domain is the build input that also wires EmDash's `access()` in
