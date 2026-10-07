@@ -1,0 +1,25 @@
+---
+import Site from '../layouts/Site.astro';
+import { seedPage } from '../content/seed-fallback';
+
+const chrome = seedPage('home');
+Astro.response.status = 404;
+---
+<Site
+  title="Page not found"
+  description="There is no page at this address."
+  brandName={chrome?.brand_name ?? ''}
+  navLabel={chrome?.nav_label ?? ''}
+  navHref={chrome?.nav_href ?? ''}
+  footerText={chrome?.footer_text ?? ''}
+  ogImageAlt={chrome?.og_image_alt ?? ''}
+  contentSource="none"
+  page="404"
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>There is no page at this address.</h1>
+      <p class="lead"><a href="/">Return to the homepage</a></p>
+    </div>
+  </section>
+</Site>

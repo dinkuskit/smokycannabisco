@@ -1,0 +1,103 @@
+---
+import '@fontsource-variable/fraunces/wght.css';
+import '@fontsource-variable/source-sans-3/wght.css';
+import '../styles/site.css';
+import { safeHref } from '../content/blocks';
+
+interface Props {
+  title: string;
+  description: string;
+  brandName: string;
+  navLabel: string;
+  navHref: string;
+  footerText: string;
+  ogImageAlt: string;
+  contentSource?: 'cms' | 'seed' | 'none';
+  page?: string;
+}
+const {
+  title,
+  description,
+  brandName,
+  navLabel,
+  navHref,
+  footerText,
+  ogImageAlt,
+  contentSource = 'none',
+  page,
+} = Astro.props;
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const canonical = new URL(pathname, Astro.site ?? 'https://www.smokycannabisco.com');
+const ogImage = new URL('/og-image.jpg', canonical);
+const storeHref = safeHref(navHref);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonical.toString(),
+  isPartOf: {
+    '@type': 'WebSite',
+    name: brandName,
+    url: 'https://www.smokycannabisco.com/',
+  },
+  about: {
+    '@type': 'Organization',
+    name: 'Smoky Mountain CBD',
+    url: 'https://www.smokymountaincbd.com/',
+    description: 'Compliant hemp-derived products shipping from Cherokee County, NC',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Cherokee County',
+      addressRegion: 'NC',
+      addressCountry: 'US',
+    },
+  },
+};
+---
+<!doctype html>
+<html lang="en" data-page={page}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={brandName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt || brandName} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    {/* Optional GA4: set PUBLIC_GA4_MEASUREMENT_ID at build time to enable. Store uses G-Q1FG6B6CR4; do not invent a property id here. */}
+  </head>
+  <body data-content-source={contentSource}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">{brandName}</span>
+      </a>
+      <nav aria-label="Main">
+        {storeHref && navLabel && (
+          <a href={storeHref} target="_blank" rel="noopener noreferrer">{navLabel}</a>
+        )}
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <p>{footerText}</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+import { stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+const items = Array.isArray(value.items)
+  ? (value.items as Array<Record<string, unknown>>).map((item) => ({
+      question: typeof item?.question === 'string' ? item.question : '',
+      answer: typeof item?.answer === 'string' ? item.answer : '',
+    })).filter((item) => item.question && item.answer)
+  : [];
+---
+<section class="faq" data-block="faq">
+  <h2>{text('heading')}</h2>
+  <div class="faq-list">
+    {items.map((item) => (
+      <details>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))}
+  </div>
+</section>

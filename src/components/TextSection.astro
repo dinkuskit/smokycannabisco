@@ -1,0 +1,17 @@
+---
+import { safeHref, stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+const href = safeHref(value.link_href);
+const anchor = text('anchor').replace(/[^a-zA-Z0-9_-]/g, '');
+const paragraphs = text('body').split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+---
+<section class="text-section" data-block="text_section" id={anchor || undefined}>
+  <h2>{text('heading')}</h2>
+  {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  {href && text('link_label') && (
+    <a class="section-link" href={href} target="_blank" rel="noopener noreferrer">{text('link_label')}</a>
+  )}
+</section>

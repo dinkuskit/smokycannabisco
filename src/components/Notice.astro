@@ -1,0 +1,11 @@
+---
+import { stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+---
+<section class="notice" data-block="notice" aria-label="Disclaimer">
+  <h2>{text('heading')}</h2>
+  <p>{text('body')}</p>
+</section>

@@ -1,0 +1,15 @@
+---
+import { safeHref, stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+const href = safeHref(value.link_href);
+---
+<section class="cta" data-block="cta">
+  <h2>{text('heading')}</h2>
+  {text('body') && <p>{text('body')}</p>}
+  {href && text('link_label') && (
+    <a class="button button-primary" href={href} target="_blank" rel="noopener noreferrer">{text('link_label')}</a>
+  )}
+</section>

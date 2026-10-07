@@ -1,0 +1,54 @@
+{
+  "name": "smokycannabisco-site",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "smokycannabisco.com: Astro + EmDash intercept site that clarifies GSCC vs Smoky Mountain CBD and routes to the store",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.22.2 <23"
+  },
+  "emdash": {
+    "seed": "seed/seed.json"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1 --port ${PORT:-45321}",
+    "build": "astro build",
+    "start": "wrangler dev --local --persist-to .local/wrangler --port 8787 --ip 127.0.0.1 --config dist/server/wrangler.json",
+    "types:wrangler": "wrangler types --config wrangler.jsonc --include-runtime false",
+    "typecheck": "astro check",
+    "audit:repo": "node scripts/audit-repo.mjs",
+    "test:content": "node --test tests/content.test.mjs",
+    "test:guard": "node --experimental-strip-types --no-warnings=ExperimentalWarning --test tests/namespace-guard.test.mjs",
+    "test:edge": "node --experimental-strip-types --no-warnings=ExperimentalWarning --test tests/host-canonical.test.mjs tests/page-cache.test.mjs",
+    "test:smoke": "node scripts/smoke.mjs",
+    "cms:check": "node scripts/cms-sync.mjs --check",
+    "cms:sync": "node scripts/cms-sync.mjs --apply",
+    "check:live": "node scripts/live-check.mjs",
+    "verify": "npm run audit:repo && npm run types:wrangler && npm run typecheck && npm run test:content && npm run test:guard && npm run test:edge && npm run build && npm run test:smoke",
+    "prepare:deploy": "node scripts/prepare-deploy.mjs"
+  },
+  "dependencies": {
+    "@astrojs/react": "6.0.5",
+    "@fontsource-variable/fraunces": "5.2.8",
+    "@fontsource-variable/source-sans-3": "5.2.9",
+    "astro": "7.3.5",
+    "emdash": "1.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@astrojs/cloudflare": "14.3.3",
+    "@cloudflare/workers-types": "5.20260926.1",
+    "@emdash-cms/cloudflare": "1.2.0",
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3",
+    "wrangler": "4.144.0"
+  },
+  "overrides": {
+    "@codemirror/language": "6.12.4"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  // Local and example configuration only. Production D1/R2 identifiers, the
+  // Access team domain and audience, and every secret stay out of source
+  // (docs/cms-access.md). Nothing here deploys.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "smokycannabisco-site",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-29",
+  "compatibility_flags": ["nodejs_compat", "nodejs_compat_populate_process_env"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "cache": {
+    "enabled": true
+  },
+  "version_metadata": {
+    "binding": "CF_VERSION_METADATA"
+  },
+  "vars": {
+    "EMDASH_SITE_URL": "https://www.smokycannabisco.com"
+  },
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "smokycannabisco-site-cms-local",
+      "database_id": "00000000-0000-0000-0000-000000000001"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "smokycannabisco-site-media-local"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "worker_loaders": [
+    {
+      "binding": "LOADER"
+    }
+  ],
+  "triggers": {
+    "crons": ["0 4 * * *"]
+  }
+}

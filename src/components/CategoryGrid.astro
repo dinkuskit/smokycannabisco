@@ -1,0 +1,30 @@
+---
+import { safeHref, stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+const items = Array.isArray(value.items)
+  ? (value.items as Array<Record<string, unknown>>).map((item) => ({
+      title: typeof item?.title === 'string' ? item.title : '',
+      body: typeof item?.body === 'string' ? item.body : '',
+      link_label: typeof item?.link_label === 'string' ? item.link_label : '',
+      link_href: safeHref(item?.link_href),
+    })).filter((item) => item.title && item.link_href)
+  : [];
+---
+<section class="category-grid" data-block="category_grid">
+  <h2>{text('heading')}</h2>
+  {text('intro') && <p class="intro">{text('intro')}</p>}
+  <ul class="category-list">
+    {items.map((item) => (
+      <li>
+        <h3>{item.title}</h3>
+        <p>{item.body}</p>
+        {item.link_label && (
+          <a href={item.link_href} target="_blank" rel="noopener noreferrer">{item.link_label}</a>
+        )}
+      </li>
+    ))}
+  </ul>
+</section>

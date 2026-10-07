@@ -1,0 +1,24 @@
+---
+import { safeHref, stringField, type SeedBlock } from '../content/blocks';
+
+interface Props { value: SeedBlock; index: number; blockKey: string }
+const { value } = Astro.props;
+const text = (field: string) => stringField(value, field);
+const primaryHref = safeHref(value.primary_href);
+const secondaryHref = safeHref(value.secondary_href);
+---
+<section class="hero" data-block="hero">
+  <div class="hero-copy">
+    {text('eyebrow') && <p class="label">{text('eyebrow')}</p>}
+    <h1>{text('heading')}</h1>
+    <p class="lead">{text('lead')}</p>
+    <div class="hero-links">
+      {primaryHref && text('primary_label') && (
+        <a class="button button-primary" href={primaryHref} target="_blank" rel="noopener noreferrer">{text('primary_label')}</a>
+      )}
+      {secondaryHref && text('secondary_label') && (
+        <a class="button button-secondary" href={secondaryHref} target="_blank" rel="noopener noreferrer">{text('secondary_label')}</a>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+---
+import { Blocks } from 'emdash/ui';
+import Site from '../layouts/Site.astro';
+import type { ContentSource } from '../content/load-page';
+import type { PageData } from '../content/seed-fallback';
+import CategoryGrid from './CategoryGrid.astro';
+import Cta from './Cta.astro';
+import Faq from './Faq.astro';
+import Hero from './Hero.astro';
+import Notice from './Notice.astro';
+import TextSection from './TextSection.astro';
+
+interface Props {
+  slug: string;
+  page: PageData | null;
+  source: ContentSource;
+}
+const { slug, page, source } = Astro.props;
+
+const components = {
+  hero: Hero,
+  notice: Notice,
+  text_section: TextSection,
+  category_grid: CategoryGrid,
+  cta: Cta,
+  faq: Faq,
+};
+---
+<Site
+  title={page?.title ?? 'Page not found'}
+  description={page?.description ?? 'There is no page at this address.'}
+  brandName={page?.brand_name ?? 'Smoky Cannabis Company'}
+  navLabel={page?.nav_label ?? ''}
+  navHref={page?.nav_href ?? ''}
+  footerText={page?.footer_text ?? ''}
+  ogImageAlt={page?.og_image_alt ?? ''}
+  contentSource={source}
+  page={slug}
+>
+  {page ? (
+    <Blocks value={page.layout as never} components={components as never} />
+  ) : (
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>There is no page at this address.</h1>
+        <p class="lead"><a href="/">Back to the homepage</a></p>
+      </div>
+    </section>
+  )}
+</Site>
