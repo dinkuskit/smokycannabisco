@@ -37,6 +37,8 @@ const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const canonical = new URL(pathname, Astro.site ?? 'https://www.smokycannabisco.com');
 const ogImage = new URL('/og-image.jpg', canonical);
 const storeHref = safeHref(navHref);
+const ga4MeasurementId = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -48,17 +50,11 @@ const jsonLd = {
     name: brandName,
     url: 'https://www.smokycannabisco.com/',
   },
-  about: {
+  publisher: {
     '@type': 'Organization',
-    name: 'Smoky Mountain CBD',
-    url: 'https://www.smokymountaincbd.com/',
-    description: 'Compliant hemp-derived THCa products shipping from Western North Carolina',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Cherokee County',
-      addressRegion: 'NC',
-      addressCountry: 'US',
-    },
+    name: brandName,
+    url: 'https://www.smokycannabisco.com/',
+    description: 'A separate informational site for Smoky Cannabis Company; not Great Smoky Cannabis Company or the Cherokee dispensary.',
   },
 };
 const faqJsonLd = faqItems.length
@@ -85,6 +81,7 @@ const faqJsonLd = faqItems.length
     <meta name="color-scheme" content="light" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={brandName} />
     <meta property="og:title" content={title} />
@@ -102,7 +99,17 @@ const faqJsonLd = faqItems.length
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
-    {/* Optional GA4: set PUBLIC_GA4_MEASUREMENT_ID at build time to enable. Store uses G-Q1FG6B6CR4; do not invent a property id here. */}
+    {ga4MeasurementId && /^G-[A-Z0-9]+$/i.test(ga4MeasurementId) && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`}></script>
+        <script define:vars={{ ga4MeasurementId }}>
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', ga4MeasurementId, { anonymize_ip: true });`}
+        </script>
+      </>
+    )}
   </head>
   <body data-content-source={contentSource}>
     <a class="skip-link" href="#main">Skip to content</a>

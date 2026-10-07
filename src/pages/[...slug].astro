@@ -1,0 +1,8 @@
+---
+import ContentPage from '../components/ContentPage.astro';
+import { preparePage } from '../content/load-page';
+
+const slug = Astro.params.slug?.replace(/^\/+|\/+$/g, '') ?? '';
+const { page, source } = await preparePage(Astro, slug);
+---
+<ContentPage slug={slug} page={page} source={source} />
