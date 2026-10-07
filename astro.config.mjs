@@ -12,7 +12,7 @@ const siteUrl = process.env.SMOKY_SITE_URL ?? 'https://www.smokycannabisco.com';
 const auth = teamDomain
   ? {
       type: 'cloudflare-access',
-      entrypoint: './src/emdash-access-auth.ts',
+      entrypoint: new URL('./src/emdash-access-auth.ts', import.meta.url).pathname,
       config: { teamDomain, audienceEnvVar: 'CF_ACCESS_AUDIENCE', defaultRole: 40 },
     }
   : undefined;
