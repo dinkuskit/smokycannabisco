@@ -1,7 +1,7 @@
 import cloudflare from '@astrojs/cloudflare';
 import { cacheCloudflare } from '@astrojs/cloudflare/cache';
 import react from '@astrojs/react';
-import { d1, r2, sandbox } from '@emdash-cms/cloudflare';
+import { access, d1, r2, sandbox } from '@emdash-cms/cloudflare';
 import { defineConfig } from 'astro/config';
 import emdash from 'emdash/astro';
 
@@ -9,13 +9,6 @@ import emdash from 'emdash/astro';
 // in production; see docs/cms-access.md. Never commit a value.
 const teamDomain = process.env.EMDASH_ACCESS_TEAM_DOMAIN ?? '';
 const siteUrl = process.env.SMOKY_SITE_URL ?? 'https://www.smokycannabisco.com';
-const auth = teamDomain
-  ? {
-      type: 'cloudflare-access',
-      entrypoint: './src/emdash-access-auth.ts',
-      config: { teamDomain, audienceEnvVar: 'CF_ACCESS_AUDIENCE', defaultRole: 40 },
-    }
-  : undefined;
 
 // The build's own timestamp: the validator of a seed-rendered page, whose
 // content changes only with a deploy (src/page-cache.ts).
@@ -33,7 +26,9 @@ export default defineConfig({
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
       sandboxRunner: sandbox(),
-      ...(auth ? { auth } : {}),
+      ...(teamDomain
+        ? { auth: access({ teamDomain, audienceEnvVar: 'CF_ACCESS_AUDIENCE', defaultRole: 40 }) }
+        : {}),
       middleware: {
         // Apex → www redirect, then the fail-closed /_emdash guard.
         outer: './src/outer-middleware.ts',
